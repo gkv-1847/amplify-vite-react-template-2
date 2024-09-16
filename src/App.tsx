@@ -27,8 +27,10 @@ function App() {
       <ul>
         {todos.map((todo) => (
           <li key={todo.id}>{todo.content}</li>
-                onClick={() => deleteTodo(todo.id)}
-        ))}
+          onClick={() => deleteTodo(todo.id)}
+          key={todo.id}>
+          {todo.content}
+        </li>)}        
       </ul>
       <div>
         🥳 App successfully hosted. Try creating a new todo.
